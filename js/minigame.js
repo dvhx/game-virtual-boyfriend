@@ -51,7 +51,7 @@ SC.minigame = (function () {
         // Play hide and seek minigame
         container.style.backgroundColor = 'white';
         container.style.backgroundImage = '';
-        iframe.src = 'https://dvhx.github.io/game-hide-and-seek/?quit=Back%20to%20library';
+        iframe.src = 'https://dvhx.github.io/game-hide-and-seek/?quit=Go%20back';
         container.style.display = 'block';
         iframe.focus();
     };
