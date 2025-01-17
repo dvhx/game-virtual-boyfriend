@@ -1,0 +1,22 @@
+/* X close */
+
+button.close {
+    color: white;
+    text-shadow: 0 -2px 2px rgba(0,0,0,0.5);
+    min-width: 1cm;
+    min-height: 1cm;
+    width: 1cm;
+    height: 1cm;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    outline: none;
+    font-size: x-large;
+}
+
+button.close.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1em;
+}

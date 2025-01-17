@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Virtual boyfriend</title>
+    <link rel="shortcut icon" href="image/icon.png" type="image/png" />
+
+    <link rel="stylesheet" href="css/button_close.css" type="text/css" />
+    <link rel="stylesheet" href="css/bubble.css" type="text/css" />
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link rel="stylesheet" href="css/restaurant_menu.css" type="text/css" />
+    <link rel="stylesheet" href="css/clothes.css" type="text/css" />
+    <link rel="stylesheet" href="css/menu.css" type="text/css" />
+    <link rel="stylesheet" href="css/shop.css" type="text/css" />
+    <link rel="stylesheet" href="css/fadeout.css" type="text/css" />
+    <link rel="stylesheet" href="css/splash.css" type="text/css" />
+    <link rel="stylesheet" href="css/options.css" type="text/css" />
+  </head>
+  <body>
+
+    <div id="scenes" class="full noborder"></div>
+
+    <div id="debug">Debug</div>
+
+    <div id="bubblecontainer">
+        <div id="bubblefix">
+            <div id="bubble" class="bubble">
+                <div id="bubbletext" class="bubbletext"></div>
+                <div class="bubble_arrow"></div>
+            </div>
+        </div>
+    </div>
+
+    <input id="question" autocomplete="off" placeholder="Type here or tap on mic" />
+
+    <nav id="nav">
+        <button id="menu">&nbsp;</button>
+        <button id="scenebutton" class="scenebutton">Scene</button>
+        <div id="status">Wait please...</div>
+        <button id="mic" class="off">&nbsp;</button>
+    </nav>
+
+    <div id="clothes_editor">
+        <div class="panel">
+            <div class="canvas">
+                <canvas id="clothes_editor_canvas"></canvas>
+            </div>
+            <div class="controls">
+                <h1>Editor</h1>
+                <div class="label"><span>🎨 </span><input id="ce_h" type="range" min="0" max="1" step="0.01" value="0" /><div id="cv_h" class="val">0</div></div>
+                <div class="label"><span>💪 </span><input id="ce_s" type="range" min="0" max="3" step="0.01" value="0.5" /><div id="cv_s" class="val">0</div></div>
+                <div class="label"><span>☀️</span><input id="ce_b" type="range" min="0" max="2" step="0.01" value="0" /><div id="cv_b" class="val">0</div></div>
+                <div class="label"><span>🌓️</span><input id="ce_c" type="range" min="0" max="2" step="0.01" value="0" /><div id="cv_c" class="val">0</div></div>
+
+                <div class="label"><button id="ce_save">Save</button></div>
+                <div class="label"><button id="ce_cancel">Cancel</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="iconmenu">
+        <nav>
+            <div class="diamonds"></div>
+            <h1>Locations</h1>
+            <button id="iconmenuclose" class="close">✖</button>
+        </nav>
+        <ul>
+            <li dataCommand="#scenefast blank"><img src="image/location/blank.png"><label>Blank</label></li>
+            <li dataCommand="#scenefast beach"><img src="image/location/beach.png"><label>Beach</label></li>
+            <li dataCommand="#scenefast restaurant"><img src="image/location/restaurant.png"><label>Restaurant</label></li>
+            <li dataCommand="#scenefast bedroom"><img src="image/location/bedroom.png"><label>Bedroom</label></li>
+            <li dataCommand="#scenefast airport"><img src="image/location/airport.png"><label>Airport</label></li>
+            <li dataCommand="#scenefast forest"><img src="image/location/forest.png"><label>Forest</label></li>
+            <li dataCommand="#scenefast library"><img src="image/location/library.png"><label>Library</label></li>
+        </ul>
+        <h1>Shopping</h1>
+        <ul>
+            <li id="shop_li_1" dataCommand="#shop tshirt_short_sleeves"><img src="image/shop/tshirt.png"><label>T-shirts</label></li>
+            <li id="shop_li_2" dataCommand="#shop tshirt_sleeveless"><img src="image/shop/tshirt_sleeveless.png"><label>Sleeveless</label></li>
+            <li id="shop_li_3" dataCommand="#shop tshirt_crop_top"><img src="image/shop/tshirt_crop_top.png"><label>Crop top</label></li>
+            <li id="shop_li_4" dataCommand="#shop tshirt_long_sleeves"><img src="image/shop/tshirt_long_sleeves.png"><label style="font-size: x-small;">Long sleeves</label></li>
+            <li id="shop_li_5" dataCommand="#shop tshirt_jacket_set"><img src="image/shop/tshirt_jacket_set.png"><label>T+J set</label></li>
+            <li id="shop_li_6" dataCommand="#shop jacket_normal"><img src="image/shop/jacket.png"><label>Jacket</label></li>
+            <li id="shop_li_7" dataCommand="#shop pants_jeans_normal"><img src="image/shop/jeans.png"><label>Jeans</label></li>
+            <li id="shop_li_8" dataCommand="#shop pants_shorts"><img src="image/shop/shorts.png"><label>Shorts</label></li>
+            <li id="shop_li_9" dataCommand="#shop shoes_sneakers"><img src="image/shop/sneakers.png"><label>Sneakers</label></li>
+            <li id="shop_li_10" dataCommand="#shop shoes_sandals"><img src="image/shop/sandals.png"><label>Sandals</label></li>
+            <li id="shop_li_11" dataCommand="#shop rare"><img src="image/shop/rare.png"><label>Rare items</label></li>
+
+            <!-- li dataCommand="#shop bag_bandolier"><img src="image/shop/bag_bandolier.png"><label>Bandolier</label></li>
+            <li dataCommand="#shop bag_messenger"><img src="image/shop/bag_messenger.png"><label>Messenger</label></li>
+            <li dataCommand="#shop other_tie"><img src="image/shop/tie.png"><label>Tie</label></li -->
+            <li id="shop_li_12" dataCommand="#shop iris_neutral"><img src="image/shop/iris_color.png"><label>Iris color</label></li>
+            <li id="shop_li_13" dataCommand="#shop hair_short"><img src="image/shop/hair_color.png"><label>Hair color</label></li>
+            <li id="shop_li_14" dataCommand="#shop haircut"><img src="image/shop/haircut.png"><label>Haircut</label></li>
+            <li id="shop_li_15" dataCommand="#closet"><img src="image/shop/closet.png"><label>My closet</label></li>
+        </ul>
+        <h1>Other</h1>
+        <ul>
+            <li dataCommand="#credits"><img src="image/credits.png"><label>Credits</label></li>
+            <li dataCommand="#options"><img src="image/options.png"><label>Options</label></li>
+        </ul>
+    </div>
+
+    <div id="shop">
+        <nav>
+            <div id="shopdiamonds">?</div>
+            <h1 id="shoptitle">Shop</h1>
+            <button id="shopclose" class="close">✖</button>
+        </nav>
+        <ul id="shopitems"></ul>
+    </div>
+
+    <!-- options -->
+    <dialog id="options" class="options">
+        <h1>Options</h1>
+        <div class="option">
+            <div class="label">Name</div>
+            <input id="options_name" type="text" minlength="1" maxlength="20" style="flex: 1;">
+        </div>
+        <div class="option">
+            <div class="label">Date of birth</div>
+            <input id="options_borndate" type="date">
+        </div>
+        <div class="option">
+            <div class="label">Age</div>
+            <input id="options_age" type="number" min="1" max="999" step="1">years
+        </div>
+        <div class="option">
+            <div class="label">Gender</div>
+            <input id="options_sex" type="text">
+        </div>
+        <div class="option">
+            <div class="label">Country</div>
+            <input id="options_location" type="text" style="flex: 1;">
+        </div>
+        <div class="option">
+            <div class="label">City</div>
+            <input id="options_city" type="text" style="flex: 1;">
+        </div>
+        <div class="option">
+            <div class="label">Height</div>
+            <input id="options_height" type="text">
+        </div>
+        <div class="option">
+            <div class="label">Weight</div>
+            <input id="options_weight" type="text">
+        </div>
+        <div class="option">
+            <div class="label">Your name</div>
+            <input id="options_user_name" type="text">
+        </div>
+        <div class="option">
+            <div class="label">Voice</div>
+            <select id="options_voice" type="text">
+                <option>none</option>
+            </select>
+        </div>
+        <div class="option">
+            <div class="label">Pitch</div>
+            <input id="options_pitch" type="range" min=0.2 max=1.3 step=0.1 value=1>
+            <button id="options_voice_test">Test</button>
+        </div>
+        <div class="option center">
+            <button id="options_save">Save</button>
+            <button id="options_cancel">Cancel</button>
+        </div>
+    </dialog>
+
+    <div id="minigame" class="fullscreen">
+        <!-- iframe id="minigame_iframe" src="https://dvhx.github.io/game-word-puzzle/?quit=Back%20to%20library"></iframe -->
+        <iframe id="minigame_iframe" src=""></iframe>
+    </div>
+
+
+    <script type="text/javascript" src="ghost/ghost.js"></script>
+    <script type="text/javascript" src="ghost/why.js"></script>
+    <script type="text/javascript" src="ghost/character/slang.js"></script>
+    <script type="text/javascript" src="ghost/character/basic.js"></script>
+    <script type="text/javascript" src="ghost/character/relationship.js"></script>
+    <script type="text/javascript" src="js/name.js"></script>
+
+    <script type="text/javascript" src="character/vb_library.js"></script>
+    <script type="text/javascript" src="character/vb_airport.js"></script>
+    <script type="text/javascript" src="character/vb_forest.js"></script>
+    <script type="text/javascript" src="character/vb_beach.js"></script>
+    <script type="text/javascript" src="character/vb_core.js"></script>
+    <script type="text/javascript" src="character/vb_dating.js"></script>
+    <script type="text/javascript" src="character/vb_restaurant.js"></script>
+    <script type="text/javascript" src="character/vb_bedroom.js"></script>
+    <script type="text/javascript" src="character/vb_sweettalk.js"></script>
+    <script type="text/javascript" src="character/vb_mode.js"></script>
+
+    <script type="text/javascript" src="js/storage.js"></script>
+    <script type="text/javascript">SC.storage.prefix = 'VB.';</script>
+    <script type="text/javascript" src="js/splash.js"></script>
+    <script type="text/javascript" src="js/sound.js"></script>
+    <script type="text/javascript" src="js/elements_with_id.js"></script>
+    <script type="text/javascript" src="js/image.js"></script>
+    <script type="text/javascript" src="js/lip.js"></script>
+    <script type="text/javascript" src="js/longtap.js"></script>
+    <script type="text/javascript" src="js/fadeout.js"></script>
+    <script type="text/javascript" src="js/scenes.js"></script>
+    <script type="text/javascript" src="js/scene.js"></script>
+    <script type="text/javascript" src="js/change.js"></script>
+    <script type="text/javascript" src="js/restaurant_menu.js"></script>
+    <script type="text/javascript" src="js/sentiment.js"></script>
+    <script type="text/javascript" src="js/crop.js"></script>
+    <script type="text/javascript" src="js/clothes_preset.js"></script>
+    <script type="text/javascript" src="js/clothes.js"></script>
+    <script type="text/javascript" src="js/closet.js"></script>
+    <script type="text/javascript" src="js/shop.js"></script>
+    <script type="text/javascript" src="js/shops.js"></script>
+    <script type="text/javascript" src="js/boy.js"></script>
+    <script type="text/javascript" src="js/options.js"></script>
+    <script type="text/javascript" src="js/speech.js"></script>
+    <script type="text/javascript" src="js/minigame.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+  </body>
+</html>

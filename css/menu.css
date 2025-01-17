@@ -1,0 +1,72 @@
+/* Fullscreen menu with icons */
+
+#iconmenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    overflow-y: scroll;
+    z-index: 20;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+
+    display: none; /* block */
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+#iconmenu nav {
+    display: flex;
+    align-items: center;
+    border: 0 solid red;
+}
+#iconmenu nav .diamonds {
+    min-width: 1cm;
+    width: 1.5cm;
+}
+#iconmenu h1 {
+    font-size: medium;
+    display: inline-block;
+    background-color: #51abff;
+    border-radius: .4em;
+    text-shadow: 0 -0.1em 0.1em rgba(0,0,0,.3);
+    box-shadow: 0 0 0.5ex black;
+    margin: 0 auto;
+    padding: 0.5ex;
+}
+#iconmenu nav button {
+    min-width: 1cm;
+    width: 1.5cm;
+    min-height: 1cm;
+}
+#iconmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 0 solid aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#iconmenu li {
+    margin: 0.5ex;
+    text-align: center;
+}
+#iconmenu img {
+    display: block;
+    border-radius: 1ex;
+    width: 1.5cm;
+    height: 1.5cm;
+}
+#iconmenu label {
+    display: block;
+}
+

@@ -1,0 +1,71 @@
+/* hsbc editor for clothes */
+
+#clothes_editor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none; /* flex */
+    flex-direction: row;
+    z-index: 30;
+    border: 0 solid orange;
+    align-items: center;
+    justify-content: center;
+}
+#clothes_editor .panel {
+    display: flex;
+    flex-direction: row;
+    border: 0 solid pink;
+    width: 80vw;
+    min-height: 40vh;
+    background-color: white;
+    box-shadow: 0 0 1ex black;
+    padding: 1ex;
+}
+#clothes_editor .canvas {
+    border: 0 solid cyan;
+    flex: 1;
+}
+#clothes_editor h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: medium;
+}
+#clothes_editor .controls {
+    border: 0 solid blue;
+    align-self: center;
+}
+#clothes_editor div.label {
+    display: flex;
+    align-items: center;
+}
+#clothes_editor span {
+    padding: 0 0.5ex 0 0.5ex;
+}
+#clothes_editor input[type=range] {
+    flex: 1;
+    min-height: 1cm;
+}
+#clothes_editor button {
+    min-height: 1cm;
+    flex: 1;
+}
+#clothes_editor canvas {
+    width: 100%;
+    height: 100%;
+    border: 0 solid gray;
+    box-sizing: border-box;
+    padding: 1ex;
+}
+#clothes_editor .val {
+    width: 4ex;
+    text-align: right;
+}
+@media only screen and (max-width: 600px) {
+    #clothes_editor .val {
+        display: none;
+    }
+}
+

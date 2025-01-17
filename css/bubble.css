@@ -1,0 +1,42 @@
+/* speech bubble */
+
+#bubblecontainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 15;
+}
+
+.bubble {
+    color: white;
+	position: relative;
+	background-color: #51abff;
+	border-radius: .4em;
+    font-weight: bold;
+    font-size: x-large;
+    padding: 1ex;
+    margin: 1ex;
+    text-align: center;
+    text-shadow: 0 -0.1em 0.1em rgba(0,0,0,.3);
+    box-shadow: 0 0 0.5ex black;
+    opacity: 0;
+}
+
+.bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #51abff;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+

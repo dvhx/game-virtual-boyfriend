@@ -1,0 +1,71 @@
+/* Restaurant's menu stylesheet */
+
+#restaurant_menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f0e9cd;
+    color: black;
+    overflow-y: scroll;
+    font-family: restaurant;
+    margin: 1ex;
+    box-shadow: 0 0 2ex black;
+    z-index: 20;
+}
+
+#restaurant_menu .border {
+    border: 1px solid #6e180b;
+    margin: 1ex;
+}
+
+#restaurant_menu h1, h2, h3 {
+    color: #6e180b;
+    margin: 1ex 1ex 0 1ex;
+    padding: 0;
+    text-align: center;
+    font-size: large;
+}
+#restaurant_menu h2 {
+    font-size: small;
+    font-weight: normal;
+    border-bottom: 1px solid black;
+    margin-top: -1ex;
+    margin-bottom: 2ex;
+}
+#restaurant_menu h3 {
+    text-align: left;
+    font-size: medium;
+}
+#restaurant_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 1ex;
+    margin-top: 1ex;
+    margin-bottom: 2ex;
+}
+#restaurant_menu li {
+    margin-bottom: 1ex;
+    clear: both;
+}
+#restaurant_menu .price {
+    float: right;
+}
+#restaurant_menu .ingredients {
+    color: gray;
+    margin-right: 1cm;
+    font-size: x-small;
+}
+#restaurant_menu .corner {
+    opacity: 0.5;
+    width: 1cm;
+    height: 1cm;
+    margin: 0;
+}
+#restaurant_menu button.close {
+    float: right;
+    color: black;
+    position: absolute;
+    right: 0.3cm;
+}

@@ -1,0 +1,176 @@
+/* main stylesheet */
+
+@font-face {
+    font-family: handwriting;
+    src: url(../font/GelPenLight.ttf) format('truetype'); 
+}
+@font-face {
+    font-family: restaurant;
+    src: url(../font/italian_cursive_14th_c.ttf) format('truetype'); 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    height: 100%;
+    font-family: handwriting;
+}
+
+.full {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /* border: 1cm solid transparent; */
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+.transition {
+    transition: opacity 0.2s linear;
+}
+.cover {
+    background-size: cover;
+}
+
+.noborder {
+    border: 0 solid transparent;
+}
+
+.piece {
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#question {
+    _opacity: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 12;
+    width: 100%;
+    box-sizing: border-box;
+    height: 1cm;
+}
+
+/* bottom nav bar with menu, status bar and microphone */
+
+#nav {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 1cm;
+    height: 1.3cm;
+    width: 100%;
+    box-sizing: border-box;
+}
+#nav button {
+    _opacity: 0;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    width: 1.3cm;
+    height: 1.3cm;
+    font-size: xx-large;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#nav .scenebutton {
+    color: white;
+    border-radius: 1ex;
+    margin: 0.5ex;
+    box-sizing: border-box;
+    flex: 1;
+    text-shadow: 0 0 2px lime;
+    font-size: medium !important;
+    height: 0.7cm;
+    background-color: darkcyan;
+    align-self: center;
+    box-shadow: 0.5ex 0.5ex 0.5ex rgba(0,0,0,0.2);
+    display: none;
+}
+#iconmenuclose {
+    color: red;
+}
+#status {
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    flex: 1;
+    font-size: large;
+    text-align: right;
+    align-self: center;
+}
+#menu {
+    background-image: url(../image/menu32.png);
+    opacity: 1;
+}
+#mic {
+}
+#mic.off {
+    background-color: #0c5da377;
+    border-radius: 50%;
+    background-image: url(../image/mic32off.png);
+}
+#mic.wait {
+    background-image: url(../image/mic32wait.png);
+    opacity: 0.8;
+}
+#mic.on {
+    background-image: url(../image/mic32on.png);
+}
+
+#debug {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 1cm;
+    color: gray;
+    z-index: 100;
+    min-height: 1cm;
+    line-height: 1cm;
+    outline: 1px solid red;
+}
+#diamonds {
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: gray;
+    z-index: 999;
+}
+
+.splash.bg {
+    z-index: 15;
+    font-family: handwriting;
+}
+
+#minigame {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: white;
+    display: none;
+}
+
+#minigame iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}

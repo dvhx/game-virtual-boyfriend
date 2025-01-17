@@ -1,0 +1,110 @@
+/* Shop where user can buy clothes */
+
+#shop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    z-index: 20;
+    padding: 1ex;
+    flex-direction: column;
+    justify-content: center;
+
+    display: none; /* flex */
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+#shop nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#shop h1 {
+    font-size: medium;
+    text-align: center;
+
+    background-color: #51abff;
+    border-radius: .4em;
+    text-shadow: 0 -0.1em 0.1em rgba(0,0,0,.3);
+    box-shadow: 0 0 0.5ex black;
+    margin: 0 auto;
+    padding: 0.5ex;
+}
+
+#shop nav button {
+    width: 1cm;
+    height: 1cm;
+    background-color: transparent;
+    border: 0;
+    color: red;
+    font-weight: bold;
+}
+
+#shop ul {
+    margin: 1ex 0 1ex 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+    border: 0 solid red;
+    flex: 1;
+}
+
+#shop li {
+    width: 2cm;
+    min-height: 1cm;
+    border: 0 solid red;
+    margin: 0.5ex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+#shop li .picture {
+    display: block;
+    margin: auto;
+    outline: 0 solid red;
+    border-radius: 1ex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2cm;
+    height: 2cm;
+}
+
+#shop li .picture_bg {
+    border-radius: 1ex;
+}
+
+#shop li .price {
+    color: skyblue;
+    font-size: small;
+}
+
+#shop li .takeoff {
+    color: orange;
+    font-size: small;
+}
+
+#shop li .owned {
+    color: lime;
+    font-size: small;
+}
+
+#shop li .wears {
+    color: orange;
+    font-size: small;
+}
+
+
