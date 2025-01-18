@@ -33,7 +33,7 @@ SC.fadeout = function (aTitle, aMessage, aCallback) {
                 aCallback();
             }
         }, 500);
-    };
+    }
 
     div.firstElementChild.style.display = "flex";
     div.firstElementChild.onclick = hide;

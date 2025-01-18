@@ -107,7 +107,7 @@ SC.speech = (function () {
         msg.onend = function () {
             self.talking = false;
             aCallback(aMessage);
-        }
+        };
         self.talking = true;
         window.speechSynthesis.speak(msg);
         return msg;

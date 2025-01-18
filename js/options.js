@@ -17,8 +17,6 @@ SC.user.params["$city;"] = SC.user.params["$city;"] || GHOST.character.vb_core.p
 SC.user.params["$height;"] = SC.user.params["$height;"] || GHOST.character.vb_core.params["$height;"];
 SC.user.params["$weight;"] = SC.user.params["$weight;"] || GHOST.character.vb_core.params["$weight;"];
 
-SC.user = SC.user;
-
 SC.options = function (aCallback) {
     // Show options dialog and handle inputs
     var e = SC.elementsWithId();
